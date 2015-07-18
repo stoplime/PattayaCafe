@@ -15,9 +15,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="css/style.css">
-    
+
     <title>Pattaya Cafe</title>
 
 </head>
@@ -25,41 +25,98 @@
 <body>
 
     <div class="navbar-fixed">
-    <nav>
-        <div class="nav-wrapper">
-            <a href="" class="brand-logo"></a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a>Menu</a></li>
-                <li><a>Gallery</a></li>
-                <li><a>Contacts</a></li>
-            </ul>
-            <ul class="side-nav" id="mobile-demo">
-                <li><a>Menu</a></li>
-                <li><a>Gallery</a></li>
-                <li><a>Contacts</a></li>
-            </ul>
-        </div>
-    </nav>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a>Menu</a></li>
+                    <li><a>Gallery</a></li>
+                    <li><a>Contacts</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a>Menu</a></li>
+                    <li><a>Gallery</a></li>
+                    <li><a>Contacts</a></li>
+                </ul>
+            </div>
+        </nav>
     </div>
 
     <script>
         $(".button-collapse").sideNav();
+
     </script>
 
 
     <div class="hero">
         <div class="container center-align">
             <div class="col s12 m4 l8">
-                <img class="image_logo" src="assets/Pattaya%20Logo.png">
+                <img class="image_logo" src="assets/Pattaya%20Logo.png" />
             </div>
         </div>
 
         <div class="row center-align">
-            <div class="col m12"><h3>Thai Cuisine</h3></div>
-          <div class="col"></div>
+            <div class="col s12 m12">
+                <h3 class="flowing-text">Thai Cuisine</h3>
+            </div>
+        </div>
+        <div class="row center-align">
+            <div class="col s6 offset-s3" id="subtitle">
+                <h5 class="flowing-text">Enjoy good quality Thia food</h5>
+                <h5 class="flowing-text">without blowing your budget</h5>
+            </div>
         </div>
     </div>
+    
+    <div class="container center-align">
+        <div class="row center-align">
+            <div class="col s3">
+                <img id="image-fadein" class="responsive-img" src="assets/gallery/1.jpg" style="opacity: 1;">
+            </div>
+            <div class="col s3 offset-s6">
+                <img id="image-fadein" class="responsive-img" src="assets/gallery/2.jpg" style="opacity: 1;">
+            </div>
+        </div>
+        <div class="row center-align">
+            <div class="col s3">
+                <img id="image-fadein" class="responsive-img" src="assets/gallery/3.jpg" style="opacity: 1;">
+            </div>
+            <div class="col s3 offset-s6">
+                <img id="image-fadein" class="responsive-img" src="assets/gallery/4.jpg" style="opacity: 1;">
+            </div>
+        </div>
+        <div class="row center-align">
+            <div class="col s3">
+                <img id="image-fadein" class="responsive-img" src="assets/gallery/5.jpg" style="opacity: 1;">
+            </div>
+            <div class="col s3 offset-s6">
+                <img id="image-fadein" class="responsive-img" src="assets/gallery/6.jpg" style="opacity: 1;">
+            </div>
+        </div>
+    </div>
+    <!--
+    <div class="footer">
+        <div class="footer-socials">
+            <span class="social-icons">                
+                <a href="https://www.facebook.com/" title="Facebook" target="_blank" hidefocus="true" style="outline: none;">
+                        <i class="tficon-facebook"></i>
+                    </a>
+                <a href="https://twitter.com" title="Twitter" target="_blank" hidefocus="true" style="outline: none;">
+                        <i class="tficon-twitter"></i>
+                    </a>
+                <a href="http://www.pinterest.com" title="Pinterest" target="_blank" hidefocus="true" style="outline: none;">
+                        <i class="tficon-pinterest"></i>
+                    </a>
+                <a href="http://www.tripadvisor.com/" title="Trip Advisor" target="_blank" hidefocus="true" style="outline: none;">
+                        <i class="tficon-trip-advisor"></i>
+                    </a>
+                <a href="http://instagram.com/" title="Instagram" target="_blank" hidefocus="true" style="outline: none;">
+                        <i class="tficon-instagram"></i>
+                    </a>
+            </span>
+        </div>
+    </div>
+    -->
 
 </body>
 
