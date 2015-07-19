@@ -27,16 +27,17 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo center"><img id="nav-logo" class="responsive-img center-align" src="assets/Pattaya%20Logo.png"></a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a>Menu</a></li>
-                    <li><a>Gallery</a></li>
-                    <li><a>Contacts</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a>Menu</a></li>
-                    <li><a>Gallery</a></li>
-                    <li><a>Contacts</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
                 </ul>
             </div>
         </nav>
@@ -68,32 +69,47 @@
         </div>
     </div>
     
+    
+    
     <div class="container center-align">
         <div class="row center-align">
             <div class="col s3">
-                <img id="image-fadein" class="responsive-img" src="assets/gallery/1.jpg" style="opacity: 1;">
+                <img id="image-fadein1" class="responsive-img" src="assets/gallery/1.jpg" style="opacity: 0;">
             </div>
             <div class="col s3 offset-s6">
-                <img id="image-fadein" class="responsive-img" src="assets/gallery/2.jpg" style="opacity: 1;">
+                <img id="image-fadein2" class="responsive-img" src="assets/gallery/2.jpg" style="opacity: 0;">
             </div>
         </div>
         <div class="row center-align">
             <div class="col s3">
-                <img id="image-fadein" class="responsive-img" src="assets/gallery/3.jpg" style="opacity: 1;">
+                <img id="image-fadein3" class="responsive-img" src="assets/gallery/3.jpg" style="opacity: 0;">
             </div>
             <div class="col s3 offset-s6">
-                <img id="image-fadein" class="responsive-img" src="assets/gallery/4.jpg" style="opacity: 1;">
+                <img id="image-fadein4" class="responsive-img" src="assets/gallery/4.jpg" style="opacity: 0;">
             </div>
         </div>
         <div class="row center-align">
             <div class="col s3">
-                <img id="image-fadein" class="responsive-img" src="assets/gallery/5.jpg" style="opacity: 1;">
+                <img id="image-fadein5" class="responsive-img" src="assets/gallery/5.jpg" style="opacity: 0;">
             </div>
             <div class="col s3 offset-s6">
-                <img id="image-fadein" class="responsive-img" src="assets/gallery/6.jpg" style="opacity: 1;">
+                <img id="image-fadein6" class="responsive-img" src="assets/gallery/6.jpg" style="opacity: 0;">
             </div>
         </div>
     </div>
+    
+    <script type="text/javascript">
+        var options = [
+            {selector: '#image-fadein1', offset: 250, callback: 'Materialize.fadeInImage("#image-fadein1")' },
+            {selector: '#image-fadein2', offset: 200, callback: 'Materialize.fadeInImage("#image-fadein2")' },
+            {selector: '#image-fadein3', offset: 250, callback: 'Materialize.fadeInImage("#image-fadein3")' },
+            {selector: '#image-fadein4', offset: 200, callback: 'Materialize.fadeInImage("#image-fadein4")' },
+            {selector: '#image-fadein5', offset: 100, callback: 'Materialize.fadeInImage("#image-fadein5")' },
+            {selector: '#image-fadein6', offset: 100, callback: 'Materialize.fadeInImage("#image-fadein6")' }
+        ];
+        Materialize.scrollFire(options);
+    </script>
+    
     <!--
     <div class="footer">
         <div class="footer-socials">

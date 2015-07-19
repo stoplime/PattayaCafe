@@ -16,6 +16,11 @@ body {
     height: auto;
 }
 
+#nav-logo {
+    width: auto;
+    height: 65px;
+}
+
 #subtitle {
     padding-top: 50px;
     padding-bottom: 200px;
