@@ -25,3 +25,7 @@ body {
     padding-top: 50px;
     padding-bottom: 200px;
 }
+
+#gallerypicture {
+    width: 100%;
+}
