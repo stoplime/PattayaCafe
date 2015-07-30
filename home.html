@@ -71,43 +71,47 @@
     
     
     
-    <div class="container center-align">
-        <div class="row center-align">
-            <div class="col s3">
-                <img id="image-fadein1" class="responsive-img" src="assets/gallery/1.jpg" style="opacity: 0;">
-            </div>
-            <div class="col s3 offset-s6">
-                <img id="image-fadein2" class="responsive-img" src="assets/gallery/2.jpg" style="opacity: 0;">
-            </div>
-        </div>
-        <div class="row center-align">
-            <div class="col s3">
-                <img id="image-fadein3" class="responsive-img" src="assets/gallery/3.jpg" style="opacity: 0;">
-            </div>
-            <div class="col s3 offset-s6">
-                <img id="image-fadein4" class="responsive-img" src="assets/gallery/4.jpg" style="opacity: 0;">
-            </div>
-        </div>
-        <div class="row center-align">
-            <div class="col s3">
-                <img id="image-fadein5" class="responsive-img" src="assets/gallery/5.jpg" style="opacity: 0;">
-            </div>
-            <div class="col s3 offset-s6">
-                <img id="image-fadein6" class="responsive-img" src="assets/gallery/6.jpg" style="opacity: 0;">
-            </div>
-        </div>
+    <div class="slider">
+        <ul class="slides">
+            <li>
+                <img src="assets/gallery/1.jpg">
+                <!-- random image -->
+                <div class="caption center-align">
+                    <h3>This is our big Tagline!</h3>
+                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="assets/gallery/2.jpg">
+                <!-- random image -->
+                <div class="caption left-align">
+                    <h3>Left Aligned Caption</h3>
+                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="assets/gallery/3.jpg">
+                <!-- random image -->
+                <div class="caption right-align">
+                    <h3>Right Aligned Caption</h3>
+                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="assets/gallery/4.jpg">
+                <!-- random image -->
+                <div class="caption center-align">
+                    <h3>This is our big Tagline!</h3>
+                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                </div>
+            </li>
+        </ul>
     </div>
     
     <script type="text/javascript">
-        var options = [
-            {selector: '#image-fadein1', offset: 250, callback: 'Materialize.fadeInImage("#image-fadein1")' },
-            {selector: '#image-fadein2', offset: 200, callback: 'Materialize.fadeInImage("#image-fadein2")' },
-            {selector: '#image-fadein3', offset: 250, callback: 'Materialize.fadeInImage("#image-fadein3")' },
-            {selector: '#image-fadein4', offset: 200, callback: 'Materialize.fadeInImage("#image-fadein4")' },
-            {selector: '#image-fadein5', offset: 100, callback: 'Materialize.fadeInImage("#image-fadein5")' },
-            {selector: '#image-fadein6', offset: 100, callback: 'Materialize.fadeInImage("#image-fadein6")' }
-        ];
-        Materialize.scrollFire(options);
+        $(document).ready(function(){
+          $('.slider').slider({full_width: true});
+        });
     </script>
     
     <!--
