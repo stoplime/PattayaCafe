@@ -1,6 +1,9 @@
 <html>
 
 <head>
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -20,13 +23,19 @@
 
     <script>
         function initialize() {
+            var myLatlng = new google.maps.LatLng(34.005484, -84.173672);
             var mapCanvas = document.getElementById('map-canvas');
             var mapOptions = {
-                center: new google.maps.LatLng(44.5403, -78.5463),
-                zoom: 8,
+                center: myLatlng,
+                zoom: 15,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             }
             var map = new google.maps.Map(mapCanvas, mapOptions)
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: 'Pattaya Cafe'
+            });
         }
         google.maps.event.addDomListener(window, 'load', initialize);
 
@@ -43,12 +52,12 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="menu.html">Menu</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contacts.html">Contacts</a></li>
+                    <li><a href="contacts.html">Contact Us</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li><a href="menu.html">Menu</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contacts.html">Contacts</a></li>
+                    <li><a href="contacts.html">Contact Us</a></li>
                 </ul>
             </div>
         </nav>
@@ -58,7 +67,7 @@
         <div class="row">
             <div class="col m6">
                 <h3>Location</h3>
-                <div id="map-canvas"></div>
+                <div id="map-canvas" class="col s12" ></div>
             </div>
             <div class="col m6">
                 <h3>Email us here:</h3>
@@ -76,7 +85,7 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <input id="email" type="email" class="validate">
-                            <label for="email">Email</label>
+                            <label for="email" data-error="Please enter a valid email" data-success="Thank You">Email</label>
                         </div>
                     </div>
                     <div class="row">
@@ -91,9 +100,12 @@
     </div>
 
     <script type="text/javascript">
-        $(document).ready(function() { $('select').material_select(); });
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+        $(".button-collapse").sideNav();
     </script>
-    
+
     <footer class="page-footer">
         <div class="container">
             <div class="row">
