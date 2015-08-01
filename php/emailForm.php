@@ -3,7 +3,7 @@
 if(isset($_POST['submit'])) {
     
     // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "slainemro@gmail.com";
+    $email_to = "pattayacafeduluth@gmail.com";
     $email_subject = "Pattaya Costomer";
     
     function died($error) {
@@ -45,7 +45,7 @@ if(isset($_POST['submit'])) {
         $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
     }
 
-    if(strlen($comments) < 2) {
+    if(strlen($message) < 2) {
         $error_message .= 'Please enter a message.<br />';
     }
 
@@ -62,7 +62,7 @@ if(isset($_POST['submit'])) {
     $email_message .= "First Name: ".clean_string($first_name)."\n";
     $email_message .= "Last Name: ".clean_string($last_name)."\n";
     $email_message .= "Email: ".clean_string($email_from)."\n";
-    $email_message .= "Message: ".clean_string($comments)."\n";
+    $email_message .= "Message: ".clean_string($message)."\n";
  
     // create email headers
     $headers = 'From: '.$email_from."\r\n".
@@ -71,3 +71,59 @@ if(isset($_POST['submit'])) {
     mail($email_to, $email_subject, $email_message, $headers);  
 }
 ?>
+
+
+<html>
+<head>
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Rokkitt:700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Pattaya Cafe</title>
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="../home.html" class="brand-logo center"><img id="nav-logo" class="responsive-img center-align" src="../assets/Pattaya%20Logo.png"></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="../menu.html">Menu</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                    <li><a href="../contacts.html">Contact Us</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="../menu.html">Menu</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                    <li><a href="../contacts.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <script>
+        $(".button-collapse").sideNav();
+    </script>
+    
+    <div class="container">
+        <h3>Thank you for contacting us!</h3>
+    </div>
+    
+</body>
+
+</html>
+
